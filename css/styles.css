@@ -298,7 +298,6 @@ body {
 
 .team-title-text {
     padding: 32px 0;
-    padding: 32px 16px;
 }
 
 .team-list {
@@ -322,8 +321,6 @@ body {
     color: var(--contact-cl);
 }
 
-.team-smm {}
-
 .team-smm-list {
     display: flex;
     justify-content: center;
@@ -343,10 +340,6 @@ body {
     align-items: center;
     flex-shrink: 0;
 }
-
-.team-smm-link {}
-
-.team-smm-icon {}
 
 /**
   |============================
@@ -504,4 +497,12 @@ body {
 
 .footer-studio {
     color: var(--footer-cl);
+}
+
+.footer-title-smm {
+    color: var(--white-cl);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
 }
