@@ -106,7 +106,7 @@ body {
 }
 
 .header-logo {
-    font-family: var(--primery-font-family);
+    font-family: "Raleway", sans-serif;
     font-weight: 800;
     font-size: 18px;
     letter-spacing: 0.03em;
@@ -201,8 +201,14 @@ body {
 
 
 .section-banner {
+    max-width: 1440px;
     background-color: var(--darkbanner-bcg);
     padding: 188px 0;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)), url(../images/people-office-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
 }
 
 .main-title {
@@ -316,6 +322,77 @@ body {
     color: var(--contact-cl);
 }
 
+.team-smm {}
+
+.team-smm-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 8px;
+
+}
+
+.team-smm-item {
+    background-color: #4D5AE5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.team-smm-link {}
+
+.team-smm-icon {}
+
+/**
+  |============================
+  | Customers
+  |============================
+*/
+
+.section-customers {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.second-title {}
+
+.customers-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.list {}
+
+.custmers-item {}
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    width: 188px;
+    height: 88px;
+}
+
+.customers-icon {
+    fill: #8E8F99;
+}
+
+.customers-link:hover {
+    border-color: #404BBF;
+}
+
+.customers-link:hover .customers-icon {
+    fill: #404BBF;
+}
+
 
 /**
   |============================
@@ -423,7 +500,6 @@ body {
     color: var(--footer-cl);
     letter-spacing: 0.02em;
     width: 264px;
-    margin-top: 17.5px;
 }
 
 .footer-studio {
