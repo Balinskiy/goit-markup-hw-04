@@ -505,4 +505,10 @@ body {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px;
+    padding-bottom: 13px;
+}
+
+.footer-container {
+    display: flex;
+    gap: 120px;
 }
