@@ -125,6 +125,8 @@ body {
 }
 
 .nav-link {
+    transition-property: color;
+    transition-duration: 250ms;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
@@ -136,6 +138,10 @@ body {
 .nav-link:hover,
 .nav-link:focus {
     color: var(--blue-hvr);
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
 }
 
 .address-list {
@@ -150,11 +156,17 @@ body {
     font-size: 16px;
     letter-spacing: 0.32px;
     color: var(--contact-cl);
+    transition-property: color;
+    transition-duration: 250ms;
 }
 
 .address-link:hover,
 .address-link:focus {
     color: var(--blue-hvr);
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
 }
 
 
@@ -232,11 +244,17 @@ body {
     height: 56px;
     border-radius: 4px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    transition-property: background-color;
+    transition-duration: 250ms;
 }
 
 .banner-btn:hover,
 .banner-btn:focus {
     background: var(--blue-hvr);
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
 }
 
 .btn-text {
@@ -311,6 +329,7 @@ body {
     text-align: center;
     border-radius: 0px 0px 4px 4px;
     width: calc((100% - 72px) / 4);
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 
 }
 
@@ -331,7 +350,7 @@ body {
 }
 
 .team-smm-item {
-    background-color: #4D5AE5;
+    background-color: var(--blue-hvr);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -340,6 +359,7 @@ body {
     align-items: center;
     flex-shrink: 0;
 }
+
 
 /**
   |============================
@@ -352,17 +372,12 @@ body {
     padding-bottom: 120px;
 }
 
-.second-title {}
 
 .customers-list {
     display: flex;
     justify-content: center;
     gap: 24px;
 }
-
-.list {}
-
-.custmers-item {}
 
 .customers-link {
     display: flex;
@@ -372,18 +387,30 @@ body {
     border-radius: 4px;
     width: 188px;
     height: 88px;
+    transition-property: fill;
+    transition-duration: 250ms;
 }
 
 .customers-icon {
     fill: #8E8F99;
 }
 
-.customers-link:hover {
+.customers-link:hover,
+.customers-link:focus {
     border-color: #404BBF;
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
 }
 
-.customers-link:hover .customers-icon {
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
     fill: #404BBF;
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
 }
 
 
@@ -417,6 +444,8 @@ body {
     padding: 12px 24px;
     border: 1px solid var(--corn-flower);
     border-radius: 4px;
+    transition-property: color, background-color shadow;
+    transition-duration: 250ms;
 }
 
 .portfolio-btn:hover,
@@ -424,6 +453,11 @@ body {
     color: var(--white-cl);
     background: var(--blue-hvr);
     border: 1px solid transparent;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.10);
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
 }
 
 .portfolio-img {
@@ -435,7 +469,21 @@ body {
 
 .portfolio-item {
     width: calc((100% - 48px) / 3);
+    transition-property: shadow;
+    transition-duration: 250ms;
+
 }
+
+.portfolio-item:hover {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
+}
+
 
 .portfolio-second-title {
     margin-bottom: 8px;
@@ -505,10 +553,44 @@ body {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px;
-    padding-bottom: 13px;
+    margin-bottom: 21px;
 }
 
 .footer-container {
     display: flex;
-    gap: 120px;
+}
+
+.footer-log-text {
+    margin-right: 120px;
+}
+
+.footer-smm-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 8px;
+
+}
+
+.footer-smm-item {
+    background-color: #4D5AE5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition-property: bacground-color;
+    transition-duration: 250ms;
+}
+
+.footer-smm-item:hover,
+.footer-smm-item:focus {
+    background-color: #31D0AA;
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
 }
