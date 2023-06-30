@@ -500,9 +500,11 @@ a.team-smm-link:focus {
 }
 
 .portfolio-item {
+    position: relative;
     width: calc((100% - 48px) / 3);
     transition-property: shadow;
     transition-duration: 250ms;
+    overflow: hidden;
 
 }
 
@@ -541,6 +543,44 @@ a.team-smm-link:focus {
     letter-spacing: 0.02em;
     color: var(--contact-cl);
 }
+
+/* Overlay styles */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+
+    transition: translate;
+    display: flex;
+    column-gap: 24px;
+    row-gap: 48px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 300px;
+    flex-shrink: 0;
+    background: var(--blue-cl);
+}
+
+.overlay-desc {
+    color: var(--white-cl);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    padding: 40px 32px 164px 32px;
+}
+
+.portfolio-item:hover .overlay {
+    transform: translate(0);
+    transition-timing-function: cubic-bezier(0.4,
+            0,
+            0.2,
+            1);
+}
+
 
 
 /**
@@ -650,6 +690,13 @@ a.footer-smm-link {
     height: 100%;
 
     background-color: rgba(46, 47, 66, 0.70);
+    z-index: 100;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
 
 .modal {
