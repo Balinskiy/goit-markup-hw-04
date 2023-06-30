@@ -508,7 +508,8 @@ a.team-smm-link:focus {
 
 }
 
-.portfolio-item:hover {
+.portfolio-item:hover,
+.portfolio-item:focus {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
         0px 1px 1px 0px rgba(46, 47, 66, 0.16),
         0px 1px 6px 0px rgba(46, 47, 66, 0.08);
@@ -549,7 +550,6 @@ a.team-smm-link:focus {
 .portfolio-overlay {
     position: relative;
     overflow: hidden;
-    transform: translateY(100%);
 }
 
 .overlay-desc {
@@ -576,6 +576,11 @@ a.team-smm-link:focus {
 .portfolio-item:hover .portfolio-overlay,
 .portfolio-item:hover .portfolio-overlay {
     transform: translate(0%);
+}
+
+.link:hover .overlay-desc,
+.link:focus .overlay-desc {
+    transform: translateY(0%);
 }
 
 
