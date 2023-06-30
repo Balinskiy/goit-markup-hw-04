@@ -738,6 +738,7 @@ a.footer-smm-link {
     padding: 0;
     border: 1px solid rgba(0, 0, 0, 0.1);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--dark-cl);
 }
 
 .modal-btn:hover,
@@ -746,7 +747,6 @@ a.footer-smm-link {
     fill: #ffffff;
     border: none;
 }
-
 
 .modal-icon {
     fill: currentColor;
