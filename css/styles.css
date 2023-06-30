@@ -53,6 +53,11 @@ img {
     height: auto;
 }
 
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
 
 /**
   |============================
@@ -125,6 +130,7 @@ body {
 }
 
 .nav-link {
+    position: relative;
     transition-property: color;
     transition-duration: 250ms;
     text-decoration: none;
@@ -133,6 +139,19 @@ body {
     letter-spacing: 0.32px;
     color: var(--dark-cl);
     padding: 24px 0;
+}
+
+.nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: var(--blue-hvr);
+    border-radius: 2px;
 }
 
 .nav-link:hover,
@@ -358,6 +377,19 @@ body {
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
+}
+
+a.team-smm-link {
+    color: var(--white-cl);
+}
+
+a.team-smm-link:hover,
+a.team-smm-link:focus {
+    color: var(--white-cl);
+}
+
+.team-smm-icon {
+    fill: currentColor;
 }
 
 
@@ -593,4 +625,63 @@ body {
             0,
             0.2,
             1);
+}
+
+a.footer-smm-link {
+    color: var(--white-cl);
+}
+
+.footer-smm-icon {
+    fill: currentColor;
+}
+
+/**
+  |============================
+  | Modal styles
+  |============================
+*/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(46, 47, 66, 0.70);
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 408px;
+    height: 584px;
+    flex-shrink: 0;
+
+    border-radius: 4px;
+    background: #FCFCFC;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+}
+
+.modal-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    background-color: #E7E9FC;
+    border-radius: 50%;
+    border: none;
+    padding: 0;
+}
+
+.modal-icon {
+    fill: currentColor;
 }
