@@ -737,7 +737,8 @@ a.footer-smm-link {
 .modal-btn:hover,
 .modal-btn:focus {
     background-color: #404bbf;
-    fill: #ffffff
+    fill: #ffffff;
+    border: none;
 }
 
 
