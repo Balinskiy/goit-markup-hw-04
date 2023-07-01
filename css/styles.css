@@ -580,7 +580,7 @@ a.team-smm-link:focus {
 }
 
 .portfolio-item:hover .portfolio-overlay,
-.portfolio-item:hover .portfolio-overlay {
+.portfolio-item:focus .portfolio-overlay {
     transform: translate(0%);
 }
 
